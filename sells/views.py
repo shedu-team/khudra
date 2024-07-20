@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Hello!")
+    return render(request, "sells/index.html")
 
 
 def mohammad(request):
