@@ -10,7 +10,7 @@ class Product(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.product_name
+        return f"{self.product_name} Price = {self.price}"
 
 # Distributors Table
 class Distributor(models.Model):
