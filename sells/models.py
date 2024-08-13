@@ -95,3 +95,10 @@ class Employee(models.Model):
 
     def __str__(self):
         return self.employee_name
+    
+#Enventory Table
+
+class Inventory(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    amount = models.DecimalField(max_digits=15, decimal_places=2, null=False)
+    date = models.DateTimeField(default=timezone.now)
